@@ -20,6 +20,23 @@ const ColorList = ({ colors, updateColors }) => {
     // Make a put request to save your updated color
     // think about where will you get the id from...
     // where is is saved right now?
+    console.log(colorToEdit.color,colorToEdit.code,colorToEdit.id)
+    const {color, code , id} = colorToEdit
+    api().put(`/api/colors/${colorToEdit.id}`,{ color,code, id} )
+    .then(res => {
+      api().get(`/api/colors`)
+      .then(res => {
+        updateColors(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
+    
+    })
+    .catch(err => {
+      console.log(err)
+    })
   };
 
   const deleteColor = color => {
