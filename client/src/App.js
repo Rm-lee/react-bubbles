@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ProtectedRoute from './components/ProtectedRoute'
+import BubblePage from './components/BubblePage'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Login from "./components/Login";

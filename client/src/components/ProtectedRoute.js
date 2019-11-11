@@ -12,6 +12,6 @@ export default function(props){
     return token
     ? <Component {...renderProps} />
     : <Redirect to="/login" />
-   }} />
+   }} /> 
   )
 }
