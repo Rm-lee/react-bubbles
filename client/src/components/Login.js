@@ -8,13 +8,13 @@ const Login = (props) => {
 
 
   const [state, setState] = useState({
-    username:"",
-    password: "" 
+    username:"Lambda School",
+    password: "i<3Lambd4" 
   })
 
   function submitHandler(e){
     e.preventDefault();
-    const{ username, passowrd} = state
+    const{ username, password} = state
     axios.post('http://localhost:5000/api/login',{username,password})
     .then(res => {
       localStorage.setItem('token', res.data.payload)
