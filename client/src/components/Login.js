@@ -24,6 +24,14 @@ const Login = (props) => {
       console.log(err)
     })
   }
+
+  function handleChange(e){
+    const value = e.target.value
+    setState({
+      ...state,
+      [e.target.name] : value
+    })
+  }
   return (
     <>
       <h1>Welcome to the Bubble App!</h1>
