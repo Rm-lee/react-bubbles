@@ -19,7 +19,7 @@ const BubblePage = () => {
       console.log(err)
     })
   
-},[])
+},[colorList.length])
 
  
 
